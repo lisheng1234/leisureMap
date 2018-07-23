@@ -14,6 +14,8 @@
 		AD6166FC2105D7DF00691B94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6166FA2105D7DF00691B94 /* LaunchScreen.storyboard */; };
 		AD6167072105D7DF00691B94 /* leisureMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6167062105D7DF00691B94 /* leisureMapTests.swift */; };
 		AD6167122105D7DF00691B94 /* leisureMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6167112105D7DF00691B94 /* leisureMapUITests.swift */; };
+		AD7075032105DB0600D5957D /* SplashviewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7075022105DB0600D5957D /* SplashviewControllerViewController.swift */; };
+		AD7075092105DE4000D5957D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7075082105DE4000D5957D /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		AD61670D2105D7DF00691B94 /* leisureMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = leisureMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6167112105D7DF00691B94 /* leisureMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leisureMapUITests.swift; sourceTree = "<group>"; };
 		AD6167132105D7DF00691B94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD7075022105DB0600D5957D /* SplashviewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashviewControllerViewController.swift; sourceTree = "<group>"; };
+		AD7075082105DE4000D5957D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,14 @@
 		AD6166F02105D7DF00691B94 /* leisureMap */ = {
 			isa = PBXGroup;
 			children = (
+				AD7075052105DBDC00D5957D /* loginfllow */,
 				AD6166F12105D7DF00691B94 /* AppDelegate.swift */,
 				AD6166F32105D7DF00691B94 /* ViewController.swift */,
 				AD6166F52105D7DF00691B94 /* Main.storyboard */,
 				AD6166F82105D7DF00691B94 /* Assets.xcassets */,
 				AD6166FA2105D7DF00691B94 /* LaunchScreen.storyboard */,
 				AD6166FD2105D7DF00691B94 /* Info.plist */,
+				AD7075022105DB0600D5957D /* SplashviewControllerViewController.swift */,
 			);
 			path = leisureMap;
 			sourceTree = "<group>";
@@ -123,6 +129,14 @@
 				AD6167132105D7DF00691B94 /* Info.plist */,
 			);
 			path = leisureMapUITests;
+			sourceTree = "<group>";
+		};
+		AD7075052105DBDC00D5957D /* loginfllow */ = {
+			isa = PBXGroup;
+			children = (
+				AD7075082105DE4000D5957D /* LoginViewController.swift */,
+			);
+			path = loginfllow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD7075092105DE4000D5957D /* LoginViewController.swift in Sources */,
 				AD6166F42105D7DF00691B94 /* ViewController.swift in Sources */,
 				AD6166F22105D7DF00691B94 /* AppDelegate.swift in Sources */,
+				AD7075032105DB0600D5957D /* SplashviewControllerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
