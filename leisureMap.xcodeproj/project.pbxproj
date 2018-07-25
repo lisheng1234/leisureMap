@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD13485E210858CF00BB0026 /* MastterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13485D210858CF00BB0026 /* MastterViewController.swift */; };
+		AD134860210858EA00BB0026 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13485F210858EA00BB0026 /* DetailViewController.swift */; };
+		AD1348632108591D00BB0026 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1348622108591D00BB0026 /* MapViewController.swift */; };
+		AD1348662108594E00BB0026 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1348652108594E00BB0026 /* NoteViewController.swift */; };
 		AD6166F22105D7DF00691B94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6166F12105D7DF00691B94 /* AppDelegate.swift */; };
 		AD6166F42105D7DF00691B94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6166F32105D7DF00691B94 /* ViewController.swift */; };
 		AD6166F72105D7DF00691B94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6166F52105D7DF00691B94 /* Main.storyboard */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD13485D210858CF00BB0026 /* MastterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastterViewController.swift; sourceTree = "<group>"; };
+		AD13485F210858EA00BB0026 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AD1348622108591D00BB0026 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		AD1348652108594E00BB0026 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		AD6166EE2105D7DF00691B94 /* leisureMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leisureMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6166F12105D7DF00691B94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6166F32105D7DF00691B94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +86,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD13485C2108588A00BB0026 /* MasterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AD13485D210858CF00BB0026 /* MastterViewController.swift */,
+				AD13485F210858EA00BB0026 /* DetailViewController.swift */,
+			);
+			path = MasterDetail;
+			sourceTree = "<group>";
+		};
+		AD134861210858FD00BB0026 /* MapFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AD1348622108591D00BB0026 /* MapViewController.swift */,
+			);
+			path = MapFlow;
+			sourceTree = "<group>";
+		};
+		AD1348642108592800BB0026 /* NoteFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AD1348652108594E00BB0026 /* NoteViewController.swift */,
+			);
+			path = NoteFlow;
+			sourceTree = "<group>";
+		};
 		AD6166E52105D7DF00691B94 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +134,9 @@
 		AD6166F02105D7DF00691B94 /* leisureMap */ = {
 			isa = PBXGroup;
 			children = (
+				AD1348642108592800BB0026 /* NoteFlow */,
+				AD134861210858FD00BB0026 /* MapFlow */,
+				AD13485C2108588A00BB0026 /* MasterDetail */,
 				AD7075052105DBDC00D5957D /* loginfllow */,
 				AD6166F12105D7DF00691B94 /* AppDelegate.swift */,
 				AD6166F32105D7DF00691B94 /* ViewController.swift */,
@@ -270,10 +306,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD1348662108594E00BB0026 /* NoteViewController.swift in Sources */,
 				AD7075092105DE4000D5957D /* LoginViewController.swift in Sources */,
 				AD6166F42105D7DF00691B94 /* ViewController.swift in Sources */,
 				AD6166F22105D7DF00691B94 /* AppDelegate.swift in Sources */,
+				AD134860210858EA00BB0026 /* DetailViewController.swift in Sources */,
 				AD7075032105DB0600D5957D /* SplashviewControllerViewController.swift in Sources */,
+				AD13485E210858CF00BB0026 /* MastterViewController.swift in Sources */,
+				AD1348632108591D00BB0026 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
