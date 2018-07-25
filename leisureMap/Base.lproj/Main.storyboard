@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A1U-ur-Hjd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -63,16 +63,59 @@
                     <view key="view" contentMode="scaleToFill" id="9Bo-Se-0uA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ock-PB-HeC">
+                                <rect key="frame" x="16" y="120" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PzH-Vf-QZZ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="A1U-ur-Hjd" id="cEe-sK-bM9"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WdX-5g-Bc9">
+                                <rect key="frame" x="16" y="180" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="A1U-ur-Hjd" id="hPa-dU-QSy"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cng-XC-2wo">
+                                <rect key="frame" x="16" y="537" width="343" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cng-XC-2wo" firstAttribute="width" secondItem="WdX-5g-Bc9" secondAttribute="width" id="CCi-7y-xJt"/>
+                            <constraint firstItem="Ock-PB-HeC" firstAttribute="top" secondItem="lYD-Ed-C8C" secondAttribute="top" constant="100" id="Fst-QZ-ccj"/>
+                            <constraint firstItem="WdX-5g-Bc9" firstAttribute="width" secondItem="Ock-PB-HeC" secondAttribute="width" id="LL4-Wj-jHA"/>
+                            <constraint firstItem="cng-XC-2wo" firstAttribute="centerX" secondItem="WdX-5g-Bc9" secondAttribute="centerX" id="TSc-Un-ZEZ"/>
+                            <constraint firstItem="cng-XC-2wo" firstAttribute="height" secondItem="WdX-5g-Bc9" secondAttribute="height" id="V9t-du-tMa"/>
+                            <constraint firstItem="WdX-5g-Bc9" firstAttribute="height" secondItem="Ock-PB-HeC" secondAttribute="height" id="WPV-YK-OT0"/>
+                            <constraint firstItem="WdX-5g-Bc9" firstAttribute="centerX" secondItem="Ock-PB-HeC" secondAttribute="centerX" id="Wla-Fj-1D6"/>
+                            <constraint firstItem="lYD-Ed-C8C" firstAttribute="bottom" secondItem="cng-XC-2wo" secondAttribute="bottom" constant="100" id="Zr2-e6-PSS"/>
+                            <constraint firstItem="Ock-PB-HeC" firstAttribute="leading" secondItem="lYD-Ed-C8C" secondAttribute="leading" constant="16" id="klm-Hi-fzO"/>
+                            <constraint firstItem="WdX-5g-Bc9" firstAttribute="top" secondItem="Ock-PB-HeC" secondAttribute="bottom" constant="30" id="tTk-Xk-MNR"/>
+                            <constraint firstItem="lYD-Ed-C8C" firstAttribute="trailing" secondItem="Ock-PB-HeC" secondAttribute="trailing" constant="16" id="v2R-IW-bBx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lYD-Ed-C8C"/>
                     </view>
                     <connections>
+                        <outlet property="btn" destination="cng-XC-2wo" id="bTB-Za-klK"/>
+                        <outlet property="texPass" destination="WdX-5g-Bc9" id="DAL-VA-3lV"/>
+                        <outlet property="textAccout" destination="Ock-PB-HeC" id="jXj-Ma-bc8"/>
                         <segue destination="5S3-Ew-Fb1" kind="show" identifier="tomovemasterview" id="mBN-Ki-hCJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pvj-se-Vj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="27"/>
+            <point key="canvasLocation" x="936.79999999999995" y="26.53673163418291"/>
         </scene>
         <!--Mastter View Controller-->
         <scene sceneID="5ZU-60-AMA">

@@ -8,8 +8,11 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,UITextFieldDelegate {
 
+    @IBOutlet weak var textAccout: UITextField!
+    @IBOutlet weak var texPass: UITextField!
+    @IBOutlet weak var btn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,14 +20,20 @@ class LoginViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        textField.tagif
+//    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.tag == 1{
+           textField.resignFirstResponder()
+           texPass.becomeFirstResponder()
+            
+        }
+        if textField.tag == 2{
+            textField.resignFirstResponder()
+        }
+        return true
     }
-    */
 
 }
