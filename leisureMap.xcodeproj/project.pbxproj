@@ -20,6 +20,7 @@
 		AD6167122105D7DF00691B94 /* leisureMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6167112105D7DF00691B94 /* leisureMapUITests.swift */; };
 		AD7075032105DB0600D5957D /* SplashviewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7075022105DB0600D5957D /* SplashviewControllerViewController.swift */; };
 		AD7075092105DE4000D5957D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7075082105DE4000D5957D /* LoginViewController.swift */; };
+		ADF14E88210961770092E84F /* NetWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF14E87210961770092E84F /* NetWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		AD6167132105D7DF00691B94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7075022105DB0600D5957D /* SplashviewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashviewControllerViewController.swift; sourceTree = "<group>"; };
 		AD7075082105DE4000D5957D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ADF14E87210961770092E84F /* NetWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		AD6166F02105D7DF00691B94 /* leisureMap */ = {
 			isa = PBXGroup;
 			children = (
+				ADF14E862109613B0092E84F /* Worker */,
 				AD1348642108592800BB0026 /* NoteFlow */,
 				AD134861210858FD00BB0026 /* MapFlow */,
 				AD13485C2108588A00BB0026 /* MasterDetail */,
@@ -173,6 +176,14 @@
 				AD7075082105DE4000D5957D /* LoginViewController.swift */,
 			);
 			path = loginfllow;
+			sourceTree = "<group>";
+		};
+		ADF14E862109613B0092E84F /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				ADF14E87210961770092E84F /* NetWorker.swift */,
+			);
+			path = Worker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +325,7 @@
 				AD7075032105DB0600D5957D /* SplashviewControllerViewController.swift in Sources */,
 				AD13485E210858CF00BB0026 /* MastterViewController.swift in Sources */,
 				AD1348632108591D00BB0026 /* MapViewController.swift in Sources */,
+				ADF14E88210961770092E84F /* NetWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,11 @@
 
 import UIKit
 
-class SplashviewControllerViewController: UIViewController {
+class SplashviewControllerViewController: UIViewController,AsyncResponseDelegate {
+   
+    var requestWorker :AsyncRequesteWorker?
+    
+    
 
     @IBOutlet weak var labverson: UILabel!
     override func viewDidLoad() {
@@ -18,39 +22,18 @@ class SplashviewControllerViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let defaults : UserDefaults = UserDefaults.standard
-        defaults.synchronize()
+       
         
         appversion = "" + (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String)!
-        labverson.text = appversion
-        //labverson.text = appversion
+       labverson.text = appversion
+       
+        requestWorker = AsyncRequesteWorker()
+        requestWorker?.reponseDelegate = self
         
         let from = "https://score.azurewebsites.net/api/version/\(String(describing: appversion))"
-        let url = URL(string: from)!
-        let request = URLRequest(url: url)
         
-        let config = URLSessionConfiguration.default
-        let session = URLSession(configuration: config)
-        
-        let task = session.dataTask(with: request, completionHandler: {(data,response,error) in
-            
-            let httpResponse = response as! HTTPURLResponse
-            let statuscode = httpResponse.statusCode
-            
-            if (200 == statuscode){
-                let datastring = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-                
-                let responseStrin = String(datastring!)
-                
-                print(responseStrin)
-                
-                
-            }
-            
-            //print("here")
-        })
-        task.resume()
-        
+        requestWorker?.getResponse(from: from, tag: 1)
+
         
     }
     
@@ -66,5 +49,21 @@ class SplashviewControllerViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    //MARK :AsyncRequesteWorker
+    func receivedRespose(_sender: AsyncRequesteWorker, responseString: String, tag: Int) {
+        print(responseString)
+        //labverson.text = responseString
+        let defaults : UserDefaults = UserDefaults.standard
+        
+        defaults.set(responseString, forKey: "serviceVersion")
+        
+        defaults.synchronize()
+        
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "moveToLoginView", sender: self)
+        }
+      
+    }
+    
 
 }
