@@ -49,6 +49,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="labverson" destination="hES-Ih-7iX" id="NVc-s9-v3o"/>
                         <segue destination="A1U-ur-Hjd" kind="show" identifier="moveToLoginView" id="BoA-pB-Zlt"/>
                     </connections>
                 </viewController>
