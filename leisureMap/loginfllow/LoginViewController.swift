@@ -8,18 +8,43 @@
 
 import UIKit
 
-class LoginViewController: UIViewController,UITextFieldDelegate {
+class LoginViewController: UIViewController,UITextFieldDelegate,AsyncResponseDelegate {
+   
+   
+    
 
     @IBOutlet weak var textAccout: UITextField!
     @IBOutlet weak var texPass: UITextField!
     @IBOutlet weak var btn: UIButton!
+    
+     var requestWorker :AsyncRequesteWorker?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //
+        
+        requestWorker = AsyncRequesteWorker()
+        requestWorker?.reponseDelegate = self
+        
+
+        print("133213")
+     
+        
+        
     }
     
-
+  
+    
+    @IBAction func btnloginclicked(_ sender: Any) {
+        
+        let accout = textAccout.text!
+        let password = texPass.text!
+        let from = "https://score.azurewebsites.net/api/login/\(accout)/\(password)"
+        requestWorker?.getResponse(from: from, tag: 1)
+        
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         //a
@@ -61,5 +86,19 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         }
         return true
     }
+    
+    //MARK :AsyncRequesteWorker
+    func receivedRespose(_sender: AsyncRequesteWorker, responseString: String, tag: Int) {
+        print(responseString)
+        //labverson.text = responseString
+     
+        
+//        DispatchQueue.main.async {
+//            self.performSegue(withIdentifier: "moveToLoginView", sender: self)
+//        }
+        
+    }
+    
+    
 
 }

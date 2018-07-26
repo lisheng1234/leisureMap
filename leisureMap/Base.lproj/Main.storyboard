@@ -88,7 +88,10 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cng-XC-2wo">
                                 <rect key="frame" x="16" y="537" width="343" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="btnloginclicked:" destination="A1U-ur-Hjd" eventType="touchUpInside" id="t9S-PD-gBP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
