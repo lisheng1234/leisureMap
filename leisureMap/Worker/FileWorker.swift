@@ -9,8 +9,8 @@
 import Foundation
 
 protocol FileWorkerDelegate {
-    func fileWorkWriteCompleted(_sender:FileWorker,filename:String,tag :Int)
-   func fileWorkReadCompleted(_sender:FileWorker,filename:String,tag :Int)
+    func fileWorkWriteCompleted(_ sender:FileWorker,filename:String,tag :Int)
+   func fileWorkReadCompleted(_ sender:FileWorker,filename:String,tag :Int)
 }
 
 class FileWorker {
@@ -21,7 +21,7 @@ class FileWorker {
             do {
                 try content.write(to: fileURL, atomically: false, encoding: .utf8)
                 
-                self.fileWorkerDelegate?.fileWorkWriteCompleted( _sender: self, filename: fileURL.absoluteString, tag: tag)
+                self.fileWorkerDelegate?.fileWorkWriteCompleted( self, filename: fileURL.absoluteString, tag: tag)
                 
             }
             catch {print(error)}
