@@ -27,6 +27,8 @@
 		ADFA3DDA210AAA99004BBB88 /* ServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFA3DD9210AAA99004BBB88 /* ServiceCategory.swift */; };
 		ADFA3DDC210AAB69004BBB88 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFA3DDB210AAB69004BBB88 /* Store.swift */; };
 		ADFA3DDE210ABF7E004BBB88 /* SQLiteWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFA3DDD210ABF7D004BBB88 /* SQLiteWorker.swift */; };
+		ADFA3DE1210AFFC6004BBB88 /* ServiceCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFA3DE0210AFFC6004BBB88 /* ServiceCellView.swift */; };
+		ADFA3DE7210B0B05004BBB88 /* StoreCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFA3DE6210B0B05004BBB88 /* StoreCellView.swift */; };
 		B08B149CF23C391A19AD342A /* Pods_leisureMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F400840CCDFF1392D80B0C7E /* Pods_leisureMapUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,8 @@
 		ADFA3DD9210AAA99004BBB88 /* ServiceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCategory.swift; sourceTree = "<group>"; };
 		ADFA3DDB210AAB69004BBB88 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		ADFA3DDD210ABF7D004BBB88 /* SQLiteWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLiteWorker.swift; path = ../../../../../Desktop/SQLiteWorker.swift; sourceTree = "<group>"; };
+		ADFA3DE0210AFFC6004BBB88 /* ServiceCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCellView.swift; sourceTree = "<group>"; };
+		ADFA3DE6210B0B05004BBB88 /* StoreCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCellView.swift; sourceTree = "<group>"; };
 		E978D0AAAD73E551F01BD45B /* Pods-leisureMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leisureMapUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-leisureMapUITests/Pods-leisureMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F400840CCDFF1392D80B0C7E /* Pods_leisureMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_leisureMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,6 +131,7 @@
 		AD13485C2108588A00BB0026 /* MasterDetail */ = {
 			isa = PBXGroup;
 			children = (
+				ADFA3DDF210AFF33004BBB88 /* CellView */,
 				AD13485D210858CF00BB0026 /* MastterViewController.swift */,
 				AD13485F210858EA00BB0026 /* DetailViewController.swift */,
 			);
@@ -234,6 +239,15 @@
 				ADFA3DDB210AAB69004BBB88 /* Store.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ADFA3DDF210AFF33004BBB88 /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				ADFA3DE0210AFFC6004BBB88 /* ServiceCellView.swift */,
+				ADFA3DE6210B0B05004BBB88 /* StoreCellView.swift */,
+			);
+			path = CellView;
 			sourceTree = "<group>";
 		};
 		C59FEB3C32D11C40F7A8728C /* Frameworks */ = {
@@ -463,6 +477,7 @@
 				AD7075092105DE4000D5957D /* LoginViewController.swift in Sources */,
 				ADFA3DDC210AAB69004BBB88 /* Store.swift in Sources */,
 				AD6166F42105D7DF00691B94 /* ViewController.swift in Sources */,
+				ADFA3DE7210B0B05004BBB88 /* StoreCellView.swift in Sources */,
 				ADFA3DDE210ABF7E004BBB88 /* SQLiteWorker.swift in Sources */,
 				ADAE84802109CF3000666BAB /* FileWorker.swift in Sources */,
 				AD6166F22105D7DF00691B94 /* AppDelegate.swift in Sources */,
@@ -470,6 +485,7 @@
 				AD7075032105DB0600D5957D /* SplashviewControllerViewController.swift in Sources */,
 				AD13485E210858CF00BB0026 /* MastterViewController.swift in Sources */,
 				AD1348632108591D00BB0026 /* MapViewController.swift in Sources */,
+				ADFA3DE1210AFFC6004BBB88 /* ServiceCellView.swift in Sources */,
 				ADF14E88210961770092E84F /* NetWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
