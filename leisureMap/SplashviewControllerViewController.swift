@@ -50,7 +50,7 @@ class SplashviewControllerViewController: UIViewController,AsyncResponseDelegate
     }
     */
     //MARK :AsyncRequesteWorker
-    func receivedRespose(_sender: AsyncRequesteWorker, responseString: String, tag: Int) {
+    func receivedRespose(_ sender: AsyncRequesteWorker, responseString: String, tag: Int) {
         print(responseString)
         //labverson.text = responseString
         let defaults : UserDefaults = UserDefaults.standard

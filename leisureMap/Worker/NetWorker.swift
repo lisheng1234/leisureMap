@@ -8,7 +8,7 @@
 
 import Foundation
 protocol AsyncResponseDelegate {
-    func receivedRespose (_sender:AsyncRequesteWorker,responseString:String,tag:Int) -> Void
+    func receivedRespose (_ sender:AsyncRequesteWorker,responseString:String,tag:Int) -> Void
 }
 class AsyncRequesteWorker{
     var reponseDelegate : AsyncResponseDelegate?
@@ -29,7 +29,7 @@ class AsyncRequesteWorker{
                 
                 let responseStrin = String(datastring!)
     
-                self.reponseDelegate?.receivedRespose(_sender: self, responseString:responseStrin, tag: tag)
+                self.reponseDelegate?.receivedRespose(self, responseString:responseStrin, tag: tag)
             }
             
             //print("here")
