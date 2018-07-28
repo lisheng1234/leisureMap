@@ -42,6 +42,8 @@ class MastterViewController: UIViewController,FileWorkerDelegate,UICollectionVie
      return   categories.count
     }
     
+ 
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let category = categories[indexPath.row]
         
@@ -81,6 +83,8 @@ class MastterViewController: UIViewController,FileWorkerDelegate,UICollectionVie
     var fileWorker :FileWorker?
     
     override func viewDidLoad() {
+        
+        
         //
         let sqliteContext = SQLiteWorker()
         let categoriesInSQLite = sqliteContext.readData()

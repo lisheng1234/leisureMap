@@ -18,7 +18,29 @@ class DetailViewController: UIViewController {
         title = selectedStore?.Name
         // Do any additional setup after loading the view.
     }
+
+    @IBAction func btnMapClicked(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "tomovemapview", sender: self)
+        }
+    }
+    @IBAction func btnWebClicked(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "tomovewebview", sender: self)
+        }
+    }
+ 
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "tomovemapview":
+            break
+        case "tomovewebview":
+            break
+        default:
+            break
+        }
+    }
 
     /*
     // MARK: - Navigation

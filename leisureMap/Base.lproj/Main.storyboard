@@ -254,12 +254,38 @@
                     <view key="view" contentMode="scaleToFill" id="Z89-DK-YKC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haW-Pi-YoC">
+                                <rect key="frame" x="0.0" y="152" width="375" height="30"/>
+                                <state key="normal" title="Map"/>
+                                <connections>
+                                    <action selector="btnMapClicked:" destination="nFn-md-9sU" eventType="touchUpInside" id="etB-iu-kH1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFR-20-AAH">
+                                <rect key="frame" x="0.0" y="318" width="375" height="30"/>
+                                <state key="normal" title="Web"/>
+                                <connections>
+                                    <action selector="btnWebClicked:" destination="nFn-md-9sU" eventType="touchUpInside" id="FrB-hC-qBy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vFR-20-AAH" firstAttribute="top" secondItem="haW-Pi-YoC" secondAttribute="bottom" constant="136" id="2US-Bb-JKt"/>
+                            <constraint firstItem="haW-Pi-YoC" firstAttribute="leading" secondItem="FGY-sr-FKh" secondAttribute="leading" id="N3g-3T-oAu"/>
+                            <constraint firstItem="vFR-20-AAH" firstAttribute="height" secondItem="haW-Pi-YoC" secondAttribute="height" id="ZJH-Up-D7s"/>
+                            <constraint firstItem="vFR-20-AAH" firstAttribute="width" secondItem="haW-Pi-YoC" secondAttribute="width" id="eWz-CG-NCQ"/>
+                            <constraint firstItem="haW-Pi-YoC" firstAttribute="top" secondItem="FGY-sr-FKh" secondAttribute="top" constant="88" id="kLp-kK-Lsc"/>
+                            <constraint firstItem="FGY-sr-FKh" firstAttribute="trailing" secondItem="haW-Pi-YoC" secondAttribute="trailing" id="o6N-vd-Ysy"/>
+                            <constraint firstItem="haW-Pi-YoC" firstAttribute="centerX" secondItem="Z89-DK-YKC" secondAttribute="centerX" id="ugT-ig-exd"/>
+                            <constraint firstItem="vFR-20-AAH" firstAttribute="centerX" secondItem="haW-Pi-YoC" secondAttribute="centerX" id="x4w-MC-vNF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FGY-sr-FKh"/>
                     </view>
                     <connections>
                         <segue destination="Pkc-9l-Fje" kind="show" identifier="tomovemapview" id="aOQ-Ms-guO"/>
-                        <segue destination="CGD-Qu-rOG" kind="show" identifier="tomovenoteview" id="LQo-kn-w7m"/>
+                        <segue destination="CGD-Qu-rOG" kind="show" identifier="tomovewebview" id="LQo-kn-w7m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zv7-gb-fW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -271,11 +297,12 @@
             <objects>
                 <viewController id="CGD-Qu-rOG" customClass="NoteViewController" customModule="leisureMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DpD-ng-So9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="M3n-Vy-iA0"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imK-QR-YHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -286,11 +313,24 @@
             <objects>
                 <viewController id="Pkc-9l-Fje" customClass="MapViewController" customModule="leisureMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SZS-jA-vQQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mz9-hC-K8v">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Pkc-9l-Fje" id="yYK-sH-43D"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="KFq-eq-igp"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="mapView" destination="mz9-hC-K8v" id="uu3-4h-7Ct"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gC-hC-ImQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
