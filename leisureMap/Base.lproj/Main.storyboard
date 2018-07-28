@@ -239,6 +239,7 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="XgC-WI-Nhx"/>
                     <connections>
+                        <outlet property="storeTable" destination="uVN-gT-ozX" id="U4w-sK-YZC"/>
                         <segue destination="nFn-md-9sU" kind="show" identifier="tomoverdtaialview" id="cLW-TD-rag"/>
                     </connections>
                 </viewController>
