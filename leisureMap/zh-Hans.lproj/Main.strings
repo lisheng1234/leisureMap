@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ynq-e9-USG"; */
+"Ynq-e9-USG.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "cng-XC-2wo"; */
+"cng-XC-2wo.normalTitle" = "登录";
+
+/* Class = "UILabel"; text = "verision"; ObjectID = "hES-Ih-7iX"; */
+"hES-Ih-7iX.text" = "verision";
+
+/* Class = "UIButton"; normalTitle = "Map"; ObjectID = "haW-Pi-YoC"; */
+"haW-Pi-YoC.normalTitle" = "地图";
+
+/* Class = "UIButton"; normalTitle = "Web"; ObjectID = "vFR-20-AAH"; */
+"vFR-20-AAH.normalTitle" = "Web";
+
+/* Class = "UIButton"; normalTitle = "Photo"; ObjectID = "w5q-fD-VmM"; */
+"w5q-fD-VmM.normalTitle" = "Photo";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wuG-b4-sOH"; */
+"wuG-b4-sOH.text" = "Label";

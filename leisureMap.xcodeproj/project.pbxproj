@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C77600864177E3C59352734 /* Pods_leisureMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D000DD3061FA72F6A74387 /* Pods_leisureMap.framework */; };
 		64B02F47780B9AB8179B5CC2 /* Pods_leisureMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B5A162AF2ACA82E76EA985 /* Pods_leisureMapTests.framework */; };
+		AD03CAC0210D440D00ABE51D /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD03CABF210D440D00ABE51D /* webViewController.swift */; };
 		AD13485E210858CF00BB0026 /* MastterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13485D210858CF00BB0026 /* MastterViewController.swift */; };
 		AD134860210858EA00BB0026 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13485F210858EA00BB0026 /* DetailViewController.swift */; };
 		AD1348632108591D00BB0026 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1348622108591D00BB0026 /* MapViewController.swift */; };
@@ -59,6 +60,9 @@
 		6A488C392182B8653BFE678D /* Pods-leisureMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leisureMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-leisureMapTests/Pods-leisureMapTests.release.xcconfig"; sourceTree = "<group>"; };
 		810FBDD43BC2FEBC37B7C5F3 /* Pods-leisureMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leisureMapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-leisureMapTests/Pods-leisureMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B12011C548AC02978F246E0 /* Pods-leisureMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leisureMapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-leisureMapUITests/Pods-leisureMapUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AD03CABF210D440D00ABE51D /* webViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
+		AD03CAC1210D69C400ABE51D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		AD03CAC2210D69C400ABE51D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		AD13485D210858CF00BB0026 /* MastterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastterViewController.swift; sourceTree = "<group>"; };
 		AD13485F210858EA00BB0026 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AD1348622108591D00BB0026 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 			children = (
 				ADE704F9210C69EC0092B146 /* MapFlag.swift */,
 				AD1348622108591D00BB0026 /* MapViewController.swift */,
+				AD03CABF210D440D00ABE51D /* webViewController.swift */,
 			);
 			path = MapFlow;
 			sourceTree = "<group>";
@@ -485,6 +490,7 @@
 				AD1348662108594E00BB0026 /* NoteViewController.swift in Sources */,
 				ADFA3DDA210AAA99004BBB88 /* ServiceCategory.swift in Sources */,
 				AD7075092105DE4000D5957D /* LoginViewController.swift in Sources */,
+				AD03CAC0210D440D00ABE51D /* webViewController.swift in Sources */,
 				ADFA3DDC210AAB69004BBB88 /* Store.swift in Sources */,
 				AD6166F42105D7DF00691B94 /* ViewController.swift in Sources */,
 				ADFA3DE7210B0B05004BBB88 /* StoreCellView.swift in Sources */,
@@ -536,6 +542,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AD6166F62105D7DF00691B94 /* Base */,
+				AD03CAC1210D69C400ABE51D /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -544,6 +551,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AD6166FB2105D7DF00691B94 /* Base */,
+				AD03CAC2210D69C400ABE51D /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -555,6 +563,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -616,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

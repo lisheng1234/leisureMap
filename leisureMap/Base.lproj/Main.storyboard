@@ -299,7 +299,21 @@
                     <view key="view" contentMode="scaleToFill" id="DpD-ng-So9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5q-fD-VmM">
+                                <rect key="frame" x="16" y="58" width="343" height="30"/>
+                                <state key="normal" title="Photo"/>
+                                <connections>
+                                    <action selector="btnPhotoClicked:" destination="CGD-Qu-rOG" eventType="touchUpInside" id="aWT-ih-Bxf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w5q-fD-VmM" firstAttribute="top" secondItem="M3n-Vy-iA0" secondAttribute="top" constant="58" id="5BN-2D-zRT"/>
+                            <constraint firstItem="M3n-Vy-iA0" firstAttribute="trailing" secondItem="w5q-fD-VmM" secondAttribute="trailing" constant="16" id="Im9-yQ-d65"/>
+                            <constraint firstItem="w5q-fD-VmM" firstAttribute="leading" secondItem="M3n-Vy-iA0" secondAttribute="leading" constant="16" id="ljX-vT-qXy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="M3n-Vy-iA0"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -330,11 +344,43 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
                         <outlet property="mapView" destination="mz9-hC-K8v" id="uu3-4h-7Ct"/>
+                        <segue destination="BPM-53-IiD" kind="show" identifier="movetowebview" id="soh-cy-eiO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gC-hC-ImQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4423.1999999999998" y="-329.68515742128938"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="2Th-cj-QY6">
+            <objects>
+                <viewController id="BPM-53-IiD" customClass="webViewController" customModule="leisureMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gRa-Ao-NUk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTa-92-Ghe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DTa-92-Ghe" firstAttribute="bottom" secondItem="jqS-W0-Q4p" secondAttribute="bottom" id="1Yz-mQ-xjA"/>
+                            <constraint firstItem="DTa-92-Ghe" firstAttribute="trailing" secondItem="jqS-W0-Q4p" secondAttribute="trailing" id="9Xh-jY-42U"/>
+                            <constraint firstItem="DTa-92-Ghe" firstAttribute="top" secondItem="jqS-W0-Q4p" secondAttribute="top" id="K87-WU-jFz"/>
+                            <constraint firstItem="DTa-92-Ghe" firstAttribute="leading" secondItem="jqS-W0-Q4p" secondAttribute="leading" id="cbG-aS-qdu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jqS-W0-Q4p"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="webview" destination="DTa-92-Ghe" id="j4G-ER-s5J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewx-B0-hX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5168.8000000000002" y="-300"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tws-zw-tZr">

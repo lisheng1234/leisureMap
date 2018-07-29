@@ -11,11 +11,23 @@ import XCTest
 
 class leisureMapTests: XCTestCase {
 
+    var sqliteWorker : SQLiteWorker?
+    
+
+    
+    
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        sqliteWorker = SQLiteWorker()
+        sqliteWorker?.createDatabase()
+    
     }
 
     override func tearDown() {
+        super.tearDown()
+        sqliteWorker?.clearAll()
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
